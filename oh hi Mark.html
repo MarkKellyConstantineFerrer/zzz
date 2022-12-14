@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+     <title>Home Page</title>
+     <link rel="stylesheet" type="text/css" href="Style.css">
+  </head>
+  <body>
+    <header>
+        <a href="#" class="MARK">Mark</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars">
+      <img src="moon.png" id="moon">
+      <img src="ibg.png" id="ibg">
+      <h2 id="text">Hi Welcome</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="bg.png" id="bg">
+    </section>
+    <div class="sec" id="sec">
+      <h2>HI WELCOME! <br><br> This is my first website</h2>
+      <p>This contains the requirements given. <br><br>There is a "Explore button" </p>
+    </div>
+
+    <script>
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let ibg = document.getElementById('ibg');
+      let text = document.getElementById('text;');
+      let btn = document.getElementById('btn');
+      let bg = document.getElementById('bg');
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        ibg.style.top = value * 0.5 + 'px';
+        bg.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 10 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+      })
+    </script>
+ </body>
+</html>
